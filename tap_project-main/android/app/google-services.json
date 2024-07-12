@@ -1,0 +1,271 @@
+{
+  "project_info": {
+    "project_number": "536669292127",
+    "project_id": "tap-project-1a9ec",
+    "storage_bucket": "tap-project-1a9ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:536669292127:android:7d0402d9aad9efea767dea",
+        "android_client_info": {
+          "package_name": "com.example.tap_project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFs5hgYehry0KVfPzIr0qPt_tw6Twi9wA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1",
+  "DATA_CTC": {
+    "VAR_WKA_I_TRC_001_OCC": {
+      "Description": "WKA, TRACK 1T OCCUPIED",
+      "Name": "VAR.WKA.I_TRC_001_OCC",
+      "TS": "2024-07-11 12:55:43",
+      "Value": 0
+    },
+    "VAR_WKA_I_TRC_001_RK": {
+      "Description": "WKA, TRACK 1_ROUTE SET",
+      "Name": "VAR.WKA.I_TRC_001_RK",
+      "TS": "2024-07-11 14:53:22",
+      "Value": 1
+    },
+    "VAR_WKA_I_TRC_002_OCC": {
+      "Description": null,
+      "Name": "VAR.WKA.I_TRC_002_OCC",
+      "TS": "2024-07-11 10:52:05",
+      "Value": 0
+    },
+    "VAR_WKA_I_TRC_002_RK": {
+      "Description": "WKA, TRACK 2_ROUTE SET",
+      "Name": "VAR.WKA.I_TRC_002_RK",
+      "TS": "2024-07-11 14:53:22",
+      "Value": 1
+    },
+    "VAR_WKA_I_TRC_003_OCC": {
+      "Description": "WKA, TRACK 3T OCCUPIED",
+      "Name": "VAR.WKA.I_TRC_003_OCC",
+      "TS": "2024-07-11 12:55:43",
+      "Value": 0
+    },
+    "VAR_WKA_I_TRC_003_RK": {
+      "Description": "WKA, TRACK 3_ROUTE SET",
+      "Name": "VAR.WKA.I_TRC_003_RK",
+      "TS": "2024-07-11 14:53:15",
+      "Value": 0
+    },
+    "VAR_WKA_I_TRC_004_OCC": {
+      "Description": "WKA, TRACK 4T OCCUPIED",
+      "Name": "VAR.WKA.I_TRC_004_OCC",
+      "TS": "2024-07-11 12:55:43",
+      "Value": 0
+    },
+    "VAR_WKA_I_TRC_004_RK": {
+      "Description": "WKA, TRACK 4_ROUTE SET",
+      "Name": "VAR.WKA.I_TRC_004_RK",
+      "TS": "2024-07-11 14:48:56",
+      "Value": 0
+    },
+    "VAR_WKA_I_TRC_005_OCC": {
+      "Description": "WKA, TRACK 5T OCCUPIED",
+      "Name": "VAR.WKA.I_TRC_005_OCC",
+      "TS": "2024-07-11 12:55:43",
+      "Value": 0
+    },
+    "VAR_WKA_I_TRC_005_RK": {
+      "Description": "WKA, TRACK 5_ROUTE SET",
+      "Name": "VAR.WKA.I_TRC_005_RK",
+      "TS": "2024-07-11 14:52:36",
+      "Value": 0
+    },
+    "VAR_WKA_I_TRC_006_OCC": {
+      "Description": "WKA, TRACK 6T OCCUPIED",
+      "Name": "VAR.WKA.I_TRC_006_OCC",
+      "TS": "2024-07-11 12:55:43",
+      "Value": 0
+    },
+    "VAR_WKA_I_TRC_006_RK": {
+      "Description": "WKA, TRACK 6_ROUTE SET",
+      "Name": "VAR.WKA.I_TRC_006_RK",
+      "TS": "2024-07-11 14:53:22",
+      "Value": 1
+    },
+    "VAR_WKA_I_TRC_007_OCC": {
+      "Description": "WKA, TRACK 7T OCCUPIED",
+      "Name": "VAR.WKA.I_TRC_007_OCC",
+      "TS": "2024-07-11 12:55:43",
+      "Value": 0
+    },
+    "VAR_WKA_I_TRC_007_RK": {
+      "Description": "WKA, TRACK 7_ROUTE SET",
+      "Name": "VAR.WKA.I_TRC_007_RK",
+      "TS": "2024-07-11 14:48:56",
+      "Value": 0
+    },
+    "VAR_WKA_I_TRC_1760_OCC": {
+      "Description": null,
+      "Name": "VAR.WKA.I_TRC_1760_OCC",
+      "TS": "2024-07-11 10:52:05",
+      "Value": 0
+    },
+    "VAR_WKA_I_TRC_1760_RK": {
+      "Description": "WKA, TRACK 1760_ROUTE SET",
+      "Name": "VAR.WKA.I_TRC_1760_RK",
+      "TS": "2024-07-11 12:55:43",
+      "Value": 0
+    },
+    "VAR_WKA_I_TRC_1762_OCC": {
+      "Description": null,
+      "Name": "VAR.WKA.I_TRC_1762_OCC",
+      "TS": "2024-07-11 10:52:05",
+      "Value": 0
+    },
+    "VAR_WKA_I_TRC_1762_RK": {
+      "Description": "WKA, TRACK 1762_ROUTE SET",
+      "Name": "VAR.WKA.I_TRC_1762_RK",
+      "TS": "2024-07-11 12:55:43",
+      "Value": 0
+    },
+    "VAR_WKA_I_TRC_1764_OCC": {
+      "Description": null,
+      "Name": "VAR.WKA.I_TRC_1764_OCC",
+      "TS": "2024-07-11 10:52:05",
+      "Value": 0
+    },
+    "VAR_WKA_I_TRC_1764_RK": {
+      "Description": "WKA, TRACK 1764_ROUTE SET",
+      "Name": "VAR.WKA.I_TRC_1764_RK",
+      "TS": "2024-07-11 12:55:43",
+      "Value": 0
+    },
+    "VAR_WKA_I_TRC_1785_OCC": {
+      "Description": "WKA, TRACK 1785 OCCUPIED",
+      "Name": "VAR.WKA.I_TRC_1785_OCC",
+      "TS": "2024-07-11 12:55:43",
+      "Value": 0
+    },
+    "VAR_WKA_I_TRC_1785_RK": {
+      "Description": "WKA, TRACK 1785_ROUTE SET",
+      "Name": "VAR.WKA.I_TRC_1785_RK",
+      "TS": "2024-07-11 12:55:43",
+      "Value": 0
+    },
+    "VAR_WKA_I_TRC_1787_OCC": {
+      "Description": null,
+      "Name": "VAR.WKA.I_TRC_1787_OCC",
+      "TS": "2024-07-11 10:52:05",
+      "Value": 0
+    },
+    "VAR_WKA_I_TRC_1787_RK": {
+      "Description": "WKA, TRACK 1787_ROUTE SET",
+      "Name": "VAR.WKA.I_TRC_1787_RK",
+      "TS": "2024-07-11 12:55:43",
+      "Value": 0
+    },
+    "VAR_WKA_I_TRC_1789_OCC": {
+      "Description": null,
+      "Name": "VAR.WKA.I_TRC_1789_OCC",
+      "TS": "2024-07-11 10:52:05",
+      "Value": 0
+    },
+    "VAR_WKA_I_TRC_1789_RK": {
+      "Description": "WKA, TRACK 1789_ROUTE SET",
+      "Name": "VAR.WKA.I_TRC_1789_RK",
+      "TS": "2024-07-11 12:55:43",
+      "Value": 0
+    },
+    "VAR_WKA_SIG_HOM1762_I_RSET": {
+      "Description": null,
+      "Name": "VAR.WKA.SIG_HOM1762.I_RSET",
+      "TS": "2024-07-11 10:52:05",
+      "Value": 0
+    },
+    "VAR_WKA_SIG_HOM1787_I_RSET": {
+      "Description": null,
+      "Name": "VAR.WKA.SIG_HOM1787.I_RSET",
+      "TS": "2024-07-11 10:52:05",
+      "Value": 0
+    },
+    "VAR_WKA_SIG_SHT1762_I_RSET": {
+      "Description": null,
+      "Name": "VAR.WKA.SIG_SHT1762.I_RSET",
+      "TS": "2024-07-11 10:52:05",
+      "Value": 0
+    },
+    "VAR_WKA_SIG_SHT1764_I_RSET": {
+      "Description": "WKA, SHUNT 1764 CLEARED",
+      "Name": "VAR.WKA.SIG_SHT1764.I_RSET",
+      "TS": "2024-07-11 14:48:56",
+      "Value": 0
+    },
+    "VAR_WKA_SIG_SHT1785_I_RSET": {
+      "Description": "WKA, SHUNT 1785 CLEARED",
+      "Name": "VAR.WKA.SIG_SHT1785.I_RSET",
+      "TS": "2024-07-11 14:53:23",
+      "Value": 1
+    },
+    "VAR_WKA_SIG_SHT1787_I_RSET": {
+      "Description": null,
+      "Name": "VAR.WKA.SIG_SHT1787.I_RSET",
+      "TS": "2024-07-11 10:52:05",
+      "Value": 0
+    },
+    "VAR_WKA_SIG_SRT1761_I_RSET": {
+      "Description": null,
+      "Name": "VAR.WKA.SIG_SRT1761.I_RSET",
+      "TS": "2024-07-11 10:52:05",
+      "Value": 0
+    },
+    "VAR_WKA_SIG_SRT1763_I_RSET": {
+      "Description": null,
+      "Name": "VAR.WKA.SIG_SRT1763.I_RSET",
+      "TS": "2024-07-11 10:52:05",
+      "Value": 0
+    },
+    "VAR_WKA_SIG_SRT1765_I_RSET": {
+      "Description": null,
+      "Name": "VAR.WKA.SIG_SRT1765.I_RSET",
+      "TS": "2024-07-11 10:52:05",
+      "Value": 0
+    },
+    "VAR_WKA_SIG_SRT1767_I_RSET": {
+      "Description": null,
+      "Name": "VAR.WKA.SIG_SRT1767.I_RSET",
+      "TS": "2024-07-11 10:52:05",
+      "Value": 0
+    },
+    "VAR_WKA_SIG_SRT1782_I_RSET": {
+      "Description": null,
+      "Name": "VAR.WKA.SIG_SRT1782.I_RSET",
+      "TS": "2024-07-11 10:52:05",
+      "Value": 0
+    },
+    "VAR_WKA_SIG_SRT1784_I_RSET": {
+      "Description": null,
+      "Name": "VAR.WKA.SIG_SRT1784.I_RSET",
+      "TS": "2024-07-11 10:52:05",
+      "Value": 0
+    },
+    "VAR_WKA_SIG_SRT1786_I_RSET": {
+      "Description": null,
+      "Name": "VAR.WKA.SIG_SRT1786.I_RSET",
+      "TS": "2024-07-11 10:52:05",
+      "Value": 0
+    },
+    "VAR_WKA_SIG_SRT1788_I_RSET": {
+      "Description": null,
+      "Name": "VAR.WKA.SIG_SRT1788.I_RSET",
+      "TS": "2024-07-11 10:52:05",
+      "Value": 0
+    }
+  }
+}
