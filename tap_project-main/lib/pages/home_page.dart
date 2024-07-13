@@ -22,12 +22,11 @@ void main() {
   // Contoh penggunaan
   String key = 'VAR_WKA_SIG_SHT1764_I_RSET';
   String? imagePath = firebaseKeyToImagePath[key];
-  
+
   if (kDebugMode) {
     print(imagePath);
   } // Output: assets/images/VAR.WKA.SIG_SHT1764.I_RSET.png
 }
-
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -37,7 +36,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  String currentLoggedInUser = ''; // Variable untuk menyimpan email pengguna yang sedang login
+  String currentLoggedInUser =
+      ''; // Variable untuk menyimpan email pengguna yang sedang login
 
   @override
   void initState() {
@@ -56,27 +56,35 @@ class _HomePageState extends State<HomePage> {
   }
 
   void _fetchImageStatusFromFirebase() {
-  DatabaseReference ref = FirebaseDatabase.instance.ref().child('imageStatus');
-  ref.onValue.listen((event) {
-    final data = event.snapshot.value as Map?;
-    if (data != null) {
-      print('Data received from Firebase: $data');
-      setState(() {
-        // Memperbarui status gambar berdasarkan data dari Firebase
-        data.forEach((key, value) {
-          String imagePath = firebaseKeyToImagePath[key] ?? '';
-          if (imagePath.isNotEmpty && imageStatus.containsKey(imagePath)) {
-            print('Updating status for $imagePath to ${value['Value']}');
-            imageStatus[imagePath] = value['Value'];
-          } else {
-            print('Image path $imagePath not found in imageStatus map');
-          }
-        });
-      });
-    }
-  });
-}
+    DatabaseReference ref = FirebaseDatabase.instance.ref().child('DATA_CTC');
+    ref.onValue.listen((event) {
+      final data = event.snapshot.value as Map?;
+      // print("DATA: $data");
 
+      if (data != null) {
+        // print('Data received from Firebase: $data');
+        setState(() {
+          // Memperbarui status gambar berdasarkan data dari Firebase
+          data.forEach((key, value) {
+            String imagePath = firebaseKeyToImagePath[key] ?? '';
+
+            // print("key : $key | value : $value");
+            // print(imageStatus.toString());
+
+            if (imagePath.isNotEmpty) {
+              print("DIR :  $imagePath");
+              print('Updating status for $imagePath to ${value['Value']}');
+              imageStatus[imagePath] = value['Value'];
+            }
+
+            // else {
+            //   print('Image path $imagePath not found in imageStatus map');
+            // }
+          });
+        });
+      }
+    });
+  }
 
   String _getImagePathFromFirebaseKey(String firebaseKey) {
     // Menggunakan pemetaan key dari Firebase ke path gambar di Flutter
@@ -230,24 +238,31 @@ class _HomePageState extends State<HomePage> {
           _buildPositionedImage('assets/images/1789.png', 0, 180, 55, 17),
           _buildPositionedImage('assets/images/1787.png', 56, 180, 55, 17),
           _buildPositionedImage('assets/images/1785.png', 112, 180, 55, 17),
-          _buildPositionedImage('assets/images/rel-pendek1.png', 169, 180, 38, 17),
+          _buildPositionedImage(
+              'assets/images/rel-pendek1.png', 169, 180, 38, 17),
           _buildPositionedImage('assets/images/T1.png', 220, 111, 83, 71),
-          _buildPositionedImage('assets/images/rel-pendek2.png', 214, 180, 38, 17),
-          _buildPositionedImage('assets/images/rel-pendek3.png', 253, 180, 38, 17),
+          _buildPositionedImage(
+              'assets/images/rel-pendek2.png', 214, 180, 38, 17),
+          _buildPositionedImage(
+              'assets/images/rel-pendek3.png', 253, 180, 38, 17),
           _buildPositionedImage('assets/images/rel-120d.png', 207, 194, 94, 55),
           _buildPositionedImage('assets/images/T6.png', 296, 180, 55, 17),
           _buildPositionedImage('assets/images/1796x.png', 310, 108, 60, 20),
-          _buildPositionedImage('assets/images/rel-miring1.png', 303, 50, 72, 62),
+          _buildPositionedImage(
+              'assets/images/rel-miring1.png', 303, 50, 72, 62),
           _buildPositionedImage('assets/images/T5.png', 365, 47, 82, 15),
           _buildPositionedImage('assets/images/T3.png', 370, 110, 72, 16),
           _buildPositionedImage('assets/images/1795x.png', 442, 109, 64, 17),
           _buildPositionedImage('assets/images/T2.png', 353, 186, 180, 5),
-          _buildPositionedImage('assets/images/rel-miring2.png', 437, 53, 72, 64),
+          _buildPositionedImage(
+              'assets/images/rel-miring2.png', 437, 53, 72, 64),
           _buildPositionedImage('assets/images/T7.png', 509, 109, 24, 17),
           _buildPositionedImage('assets/images/T4.png', 535, 180, 55, 17),
-          _buildPositionedImage('assets/images/rel-diagonal.png', 533, 124, 69, 52),
+          _buildPositionedImage(
+              'assets/images/rel-diagonal.png', 533, 124, 69, 52),
           _buildPositionedImage('assets/images/tel-t.png', 542, 107, 41, 21),
-          _buildPositionedImage('assets/images/rel-pendek4.png', 598, 180, 38, 17),
+          _buildPositionedImage(
+              'assets/images/rel-pendek4.png', 598, 180, 38, 17),
           _buildPositionedImage('assets/images/1764.png', 636, 180, 55, 17),
           _buildPositionedImage('assets/images/1762.png', 693, 180, 55, 17),
           _buildPositionedImage('assets/images/1760.png', 748, 180, 55, 17),
@@ -263,14 +278,17 @@ class _HomePageState extends State<HomePage> {
           _buildPositionedImage('assets/images/LB1787.png', 51, 216, 30, 14),
           _buildPositionedImage('assets/images/LB1788.png', 101, 162, 30, 14),
           _buildPositionedImage('assets/images/LB1789.png', 3, 199, 30, 14),
-          _buildPositionedImage('assets/images/VAR.WKA.SIG_SHT1764.I_RSET.png', 623, 160, 27, 18),
+          _buildPositionedImage(
+              'assets/images/VAR.WKA.SIG_SHT1764.I_RSET.png', 623, 160, 27, 18),
         ],
       ),
     );
   }
 
-  Widget _buildPositionedImage(String imagePath, double left, double top, double width, double height) {
-    int status = imageStatus[imagePath] ?? 1; // Default to 1 (menyala) if not found
+  Widget _buildPositionedImage(
+      String imagePath, double left, double top, double width, double height) {
+    int status =
+        imageStatus[imagePath] ?? 1; // Default to 1 (menyala) if not found
     return Positioned(
       left: left,
       top: top,
