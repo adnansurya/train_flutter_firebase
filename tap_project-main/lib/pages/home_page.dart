@@ -15,6 +15,18 @@ final Map<String, int> imageStatus = {};
 // Pemetaan key dari Firebase ke path gambar di Flutter
 final Map<String, String> firebaseKeyToImagePath = {
   'VAR_WKA_SIG_SHT1764_I_RSET': 'assets/images/VAR.WKA.SIG_SHT1764.I_RSET.png',
+  'VAR.WKA.I_TRC_002_RK': 'assets/images/VAR.WKA.I_TRC_002_RK.png',
+  'VAR_WKA_I_TRC_1789_RK': 'assets/images/VAR_WKA_I_TRC_1789_RK.png',
+  'VAR_WKA_I_TRC_1787_RK': 'assets/images/VAR_WKA_I_TRC_1787_RK.png',
+  'VAR_WKA_I_TRC_1785_RK': 'assets/images/VAR_WKA_I_TRC_1785_RK.png',
+  'VAR_WKA_I_TRC_1764_RK': 'assets/images/VAR_WKA_I_TRC_1764_RK.png',
+  'VAR_WKA_I_TRC_1762_RK': 'assets/images/VAR_WKA_I_TRC_1762_RK.png',
+  'VAR_WKA_I_TRC_1760_RK': 'assets/images/VAR_WKA_I_TRC_1760_RK.png',
+  'VAR_WKA_I_TRC_007_RK': 'assets/images/VAR_WKA_I_TRC_007_RK.png',
+  'VAR_WKA_I_TRC_006_RK': 'assets/images/VAR_WKA_I_TRC_006_RK.png',
+  'VAR_WKA_I_TRC_004_RK': 'assets/images/VAR_WKA_I_TRC_004_RK.png',
+  'VAR_WKA_I_TRC_003_RK': 'assets/images/VAR_WKA_I_TRC_003_RK.png',
+  'VAR_WKA_I_TRC_001_RK': 'assets/images/VAR_WKA_I_TRC_001_RK.png',
   // Tambahkan pemetaan lain di sini
 };
 
@@ -59,7 +71,7 @@ class _HomePageState extends State<HomePage> {
     DatabaseReference ref = FirebaseDatabase.instance.ref().child('DATA_CTC');
     ref.onValue.listen((event) {
       final data = event.snapshot.value as Map?;
-      // print("DATA: $data");
+      print("DATA: $data");
 
       if (data != null) {
         // print('Data received from Firebase: $data');
@@ -68,11 +80,11 @@ class _HomePageState extends State<HomePage> {
           data.forEach((key, value) {
             String imagePath = firebaseKeyToImagePath[key] ?? '';
 
-            // print("key : $key | value : $value");
-            // print(imageStatus.toString());
+            print("key : $key | value : $value");
+            print(imageStatus.toString());
 
             if (imagePath.isNotEmpty) {
-              print("DIR :  $imagePath");
+              // print("DIR :  $imagePath");
               print('Updating status for $imagePath to ${value['Value']}');
               imageStatus[imagePath] = value['Value'];
             }
@@ -235,58 +247,77 @@ class _HomePageState extends State<HomePage> {
       body: Stack(
         children: [
           // First row of images
-          _buildPositionedImage('assets/images/1789.png', 0, 180, 55, 17),
-          _buildPositionedImage('assets/images/1787.png', 56, 180, 55, 17),
-          _buildPositionedImage('assets/images/1785.png', 112, 180, 55, 17),
           _buildPositionedImage(
-              'assets/images/rel-pendek1.png', 169, 180, 38, 17),
-          _buildPositionedImage('assets/images/T1.png', 220, 111, 83, 71),
+              'assets/images/VAR_WKA_I_TRC_1789_RK.png', 0, 180, 55, 17, 0),
           _buildPositionedImage(
-              'assets/images/rel-pendek2.png', 214, 180, 38, 17),
+              'assets/images/VAR_WKA_I_TRC_1787_RK.png', 56, 180, 55, 17, 0),
           _buildPositionedImage(
-              'assets/images/rel-pendek3.png', 253, 180, 38, 17),
-          _buildPositionedImage('assets/images/rel-120d.png', 207, 194, 94, 55),
-          _buildPositionedImage('assets/images/T6.png', 296, 180, 55, 17),
-          _buildPositionedImage('assets/images/1796x.png', 310, 108, 60, 20),
+              'assets/images/VAR_WKA_I_TRC_1785_RK.png', 112, 180, 55, 17, 0),
           _buildPositionedImage(
-              'assets/images/rel-miring1.png', 303, 50, 72, 62),
-          _buildPositionedImage('assets/images/T5.png', 365, 47, 82, 15),
-          _buildPositionedImage('assets/images/T3.png', 370, 110, 72, 16),
-          _buildPositionedImage('assets/images/1795x.png', 442, 109, 64, 17),
-          _buildPositionedImage('assets/images/T2.png', 353, 186, 180, 5),
+              'assets/images/VAR_WKA_I_TRC_001_RK.png', 169, 180, 38, 17, 0),
+          _buildPositionedImage('assets/images/T1.png', 220, 111, 83, 71, 0),
           _buildPositionedImage(
-              'assets/images/rel-miring2.png', 437, 53, 72, 64),
-          _buildPositionedImage('assets/images/T7.png', 509, 109, 24, 17),
-          _buildPositionedImage('assets/images/T4.png', 535, 180, 55, 17),
+              'assets/images/VAR_WKA_I_TRC_006_RK.png', 214, 180, 38, 17, 0),
           _buildPositionedImage(
-              'assets/images/rel-diagonal.png', 533, 124, 69, 52),
-          _buildPositionedImage('assets/images/tel-t.png', 542, 107, 41, 21),
+              'assets/images/VAR_WKA_I_TRC_006_RK.png', 253, 180, 38, 17, 0),
           _buildPositionedImage(
-              'assets/images/rel-pendek4.png', 598, 180, 38, 17),
-          _buildPositionedImage('assets/images/1764.png', 636, 180, 55, 17),
-          _buildPositionedImage('assets/images/1762.png', 693, 180, 55, 17),
-          _buildPositionedImage('assets/images/1760.png', 748, 180, 55, 17),
-          _buildPositionedImage('assets/images/LB1760.png', 777, 165, 30, 14),
-          _buildPositionedImage('assets/images/LB1761.png', 683, 200, 30, 14),
-          _buildPositionedImage('assets/images/LB1762.png', 734, 157, 30, 14),
-          _buildPositionedImage('assets/images/LB1763.png', 514, 202, 30, 14),
-          _buildPositionedImage('assets/images/LB1765.png', 436, 143, 30, 14),
-          _buildPositionedImage('assets/images/LB1767.png', 428, 68, 30, 14),
-          _buildPositionedImage('assets/images/LB1782.png', 339, 164, 30, 14),
-          _buildPositionedImage('assets/images/LB1784.png', 350, 88, 30, 14),
-          _buildPositionedImage('assets/images/LB1786.png', 353, 31, 30, 14),
-          _buildPositionedImage('assets/images/LB1787.png', 51, 216, 30, 14),
-          _buildPositionedImage('assets/images/LB1788.png', 101, 162, 30, 14),
-          _buildPositionedImage('assets/images/LB1789.png', 3, 199, 30, 14),
+              'assets/images/rel-120d.png', 207, 194, 94, 55, 0),
+          _buildPositionedImage('assets/images/T6.png', 296, 180, 55, 17, 0),
           _buildPositionedImage(
-              'assets/images/VAR.WKA.SIG_SHT1764.I_RSET.png', 623, 160, 27, 18),
+              'assets/images/VAR_WKA_I_TRC_003_RK.png', 310, 108, 60, 20, 0),
+          _buildPositionedImage(
+              'assets/images/rel-miring1.png', 303, 50, 72, 62, 0),
+          _buildPositionedImage('assets/images/T5.png', 365, 47, 82, 15, 0),
+          _buildPositionedImage(
+              'assets/images/VAR_WKA_I_TRC_003_RK.png', 370, 110, 72, 16, 0),
+          _buildPositionedImage(
+              'assets/images/VAR_WKA_I_TRC_003_RK.png', 442, 109, 64, 17, 0),
+          _buildPositionedImage(
+              'assets/images/VAR.WKA.I_TRC_002_RK.png', 353, 186, 180, 5, 0),
+          _buildPositionedImage(
+              'assets/images/rel-miring2.png', 437, 53, 72, 64, 0),
+          _buildPositionedImage(
+              'assets/images/VAR_WKA_I_TRC_007_RK.png', 509, 109, 24, 17, 0),
+          _buildPositionedImage('assets/images/T4.png', 535, 180, 55, 17, 0),
+          _buildPositionedImage(
+              'assets/images/rel-diagonal.png', 533, 124, 69, 52, 0),
+          _buildPositionedImage('assets/images/tel-t.png', 542, 107, 41, 21, 0),
+          _buildPositionedImage(
+              'assets/images/VAR_WKA_I_TRC_004_RK.png', 598, 180, 38, 17, 0),
+          _buildPositionedImage(
+              'assets/images/VAR_WKA_I_TRC_1764_RK.png', 636, 180, 55, 17, 0),
+          _buildPositionedImage(
+              'assets/images/VAR_WKA_I_TRC_1762_RK.png', 693, 180, 55, 17, 0),
+          _buildPositionedImage(
+              'assets/images/VAR_WKA_I_TRC_1760_RK.png', 748, 180, 55, 17, 0),
+          _buildPositionedImage(
+              'assets/images/LB1760.png', 777, 165, 30, 14, 0),
+          _buildPositionedImage(
+              'assets/images/LB1761.png', 683, 200, 30, 14, 0),
+          _buildPositionedImage(
+              'assets/images/LB1762.png', 734, 157, 30, 14, 0),
+          _buildPositionedImage(
+              'assets/images/LB1763.png', 514, 202, 30, 14, 0),
+          _buildPositionedImage(
+              'assets/images/LB1765.png', 436, 143, 30, 14, 0),
+          _buildPositionedImage('assets/images/LB1767.png', 428, 68, 30, 14, 0),
+          _buildPositionedImage(
+              'assets/images/LB1782.png', 339, 164, 30, 14, 0),
+          _buildPositionedImage('assets/images/LB1784.png', 350, 88, 30, 14, 0),
+          _buildPositionedImage('assets/images/LB1786.png', 353, 31, 30, 14, 0),
+          _buildPositionedImage('assets/images/LB1787.png', 51, 216, 30, 14, 0),
+          _buildPositionedImage(
+              'assets/images/LB1788.png', 101, 162, 30, 14, 0),
+          _buildPositionedImage('assets/images/LB1789.png', 3, 199, 30, 14, 0),
+          _buildPositionedImage('assets/images/VAR.WKA.SIG_SHT1764.I_RSET.png',
+              623, 160, 27, 18, 0),
         ],
       ),
     );
   }
 
-  Widget _buildPositionedImage(
-      String imagePath, double left, double top, double width, double height) {
+  Widget _buildPositionedImage(String imagePath, double left, double top,
+      double width, double height, double rotationAngle) {
     int status =
         imageStatus[imagePath] ?? 1; // Default to 1 (menyala) if not found
     return Positioned(
@@ -296,15 +327,18 @@ class _HomePageState extends State<HomePage> {
         onTap: () {
           _showImageStatus(context, imagePath);
         },
-        child: ColorFiltered(
-          colorFilter: ColorFilter.mode(
-            _getImageColor(imagePath, status),
-            BlendMode.srcATop,
-          ),
-          child: Image.asset(
-            imagePath,
-            width: width,
-            height: height,
+        child: Transform.rotate(
+          angle: rotationAngle, // Sudut rotasi dalam radian
+          child: ColorFiltered(
+            colorFilter: ColorFilter.mode(
+              _getImageColor(imagePath, status),
+              BlendMode.srcATop,
+            ),
+            child: Image.asset(
+              imagePath,
+              width: width,
+              height: height,
+            ),
           ),
         ),
       ),
