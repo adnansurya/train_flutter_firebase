@@ -80,19 +80,19 @@ class _HomePageState extends State<HomePage> {
           data.forEach((key, value) {
             String imagePath = firebaseKeyToImagePath[key] ?? '';
 
-            print("key : $key | value : $value");
-            print(imageStatus.toString());
+            print("key : $key | value : ${value['Value']}");
 
             if (imagePath.isNotEmpty) {
               // print("DIR :  $imagePath");
               print('Updating status for $imagePath to ${value['Value']}');
-              imageStatus[imagePath] = value['Value'];
+              imageStatus[imagePath] = value['Value'].toInt();
             }
 
             // else {
             //   print('Image path $imagePath not found in imageStatus map');
             // }
           });
+          print(imageStatus.toString());
         });
       }
     });
